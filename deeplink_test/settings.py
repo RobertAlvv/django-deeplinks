@@ -122,7 +122,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.getenv('STATIC_ROOT', os.getenv('STATIC_ROOT'))
+# STATIC_ROOT = os.getenv('STATIC_ROOT', os.getenv('STATIC_ROOT'))
 
 
 # Default primary key field type
