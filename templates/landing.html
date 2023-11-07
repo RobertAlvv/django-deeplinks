@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tinkagente</title>
+  <link rel="shortcut icon" href="/static/landing/assets/images/favicon.ico?v=3">
+  <style type="text/css">
+    @font-face {
+      font-family: 'Inter';
+      src: url('/static/landing/assets/fonts/Inter-Regular.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      src: url('/static/landing/assets/fonts/Inter-SemiBold.woff2') format('woff2');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }  
+  </style>
+  <style type="text/css">
+    @font-face {
+      font-family: 'Phi';
+      src: url('/static/landing/assets/fonts/PhiBold.woff2') format('woff2'),
+          url('/static/landing/assets/fonts/PhiBold.woff') format('woff');
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+  <style type="text/css">
+    :root {
+      --font: "Phi", -apple-system, system-ui, sans-serif;
+      --font-inter: "Inter", -apple-system, system-ui, sans-serif;
+      --font-size: 1.2rem;
+      --white-color: #fff;
+      --black-color: #010103;
+      --primary-color: #146b38;
+      --text-color: #545454;
+      --accent-color: #154d80;
+    }
+
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-smooth: antialiased;
+      text-rendering: optimizeLegibility;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    html {
+      text-size-adjust: 100%;
+      font-size: 62.5%;
+      line-height: 1.5;
+      -webkit-text-size-adjust: 100%;
+    }
+    body {
+      background-color: var(--white-color);
+      color: var(--text-color);
+      font-family: var(--font);
+      font-weight: normal;
+      margin: 0;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      width: 100%;
+    }
+    a {
+      background-color: transparent;
+    }
+    img {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+      border-style: none;
+    }
+    button {
+      padding: 0;
+      border-radius: 0;
+      outline: none;
+      border: none;
+      background-color: transparent;
+    }
+    button:hover,
+    button:focus {
+      outline: none;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+    }
+    p {
+      margin: 0;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      font-family: var(--font-inter);
+      font-weight: var(--medium);
+      text-decoration: none;
+      padding: 1rem 2.4rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      appearance: none;
+      outline: none;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background-color: var(--primary-color);
+      color: var(--white-color);
+    }
+    @media (min-width: 768px) {
+      .btn {
+        padding: 1.2rem 5rem;
+      }
+    }
+  </style>
+  <style type="text/css">
+    .open-graph {
+      display: flex;
+      width: 100%;
+      min-height: 100vh;
+      position: relative;
+    }
+    .open-graph__bg {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .open-graph__bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .open-graph__wrapper {
+      flex: 1;
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 3.2rem 2.4rem;
+    }
+    .open-graph__logo {
+      position: relative;
+      margin-top: 1.2rem;
+      margin-bottom: 3.2rem;
+    }
+    .open-graph__logo img {
+      width: 230px;
+    }
+    .open-graph__title {
+      margin-bottom: 2.1rem;
+    }
+    .open-graph__title h1 {
+      color: var(--black-color);
+      font-size: 3rem;
+      font-weight: bold;
+      line-height: 1.2;
+      letter-spacing: 0.1px;
+    }
+    .open-graph__title h1 span {
+      color: var(--primary-color);
+    }
+    .open-graph__link {
+      margin-bottom: 1.6rem;
+    }
+    .open-graph__stores {
+      display: flex;
+      margin-bottom: 3.2rem;
+    }
+    .open-graph__store {
+      display: inline-flex;
+      margin-left: 1rem;
+    }
+    .open-graph__paragraph p, 
+    .open-graph__paragraph a {
+      font-family: var(--font-inter);
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .open-graph__paragraph  a {
+      color: var(--accent-color);
+    }
+    .open-graph__phone {
+      margin: 0;
+      position: relative;
+      margin-right: -2.4rem;
+      margin-bottom: -3.2rem;
+    }
+    .open-graph__phone img {
+      width: 100%;
+    }
+
+    @media (max-width: 1023px) {
+      .open-graph__title h1 br, 
+      .open-graph__paragraph p br {
+        display: none;
+      }
+
+      .open-graph__store img {
+        width: 198px;
+      }
+    }
+    @media (min-width: 768px) {
+      .open-graph__wrapper {
+        padding: 3.2rem 4.8rem;
+      }
+      .open-graph__logo {
+        margin-top: 1.3rem;
+        margin-bottom: 12.33rem;
+      }
+      .open-graph__title h1 {
+        font-size: 4.5rem;
+      }
+
+      .open-graph__paragraph p, 
+      .open-graph__paragraph a {
+        font-size: 2.2rem;
+      }
+
+      .open-graph__phone {
+        margin-right: -4.8rem;
+        margin-bottom: -3.2rem;
+      }
+    }
+    @media (min-width: 1024px) {
+      .open-graph__wrapper {
+        padding: 4.2rem 7.4rem;
+      }
+      .open-graph__phone {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="open-graph">
+    <picture class="open-graph__bg">
+        <source media="(min-width: 1024px)" srcset="/static/landing/assets/images/bg-desktop-group.png" />
+        <img src="/static/landing/assets/images/bg-desktop.png" alt="Fondo La Tinka" loading="eager"/>
+    </picture>
+    <div class="open-graph__wrapper">
+      <div class="open-graph__logo">
+        <img src="/static/landing/assets/images/logo-la-tinka.svg" alt="La Tinka" width="230">
+      </div>
+      <div class="open-graph__title">
+        <h1>¡Descarga el aplicativo <br> <span>Tinkagente 4.0</span> desde tu celular!</h1>
+      </div>
+      <div class="open-graph__link">
+        <a href="#" class="btn btn-primary" title="¡Descarga la app aquí!">
+          ¡Descarga la app aquí!
+        </a>
+      </div>
+      <div class="open-graph__stores">
+        <a href="#" class="open-graph__store" title="Disponible en Google Play">
+          <img src="/static/landing/assets/images/google-play.png" alt="Google Play" width="230" />
+        </a>
+      </div>
+
+      <div class="open-graph__paragraph">
+        <p>
+          Si no eres un agente o franquicia, encuentra información en, <br>
+          <a href="https://franquiciastinkateapuesto.com/" target="_blank" rel="noopener noreferrer" title="www.franquiciastinkateapuesto.com">
+            www.franquiciastinkateapuesto.com
+          </a>
+        </p>
+      </div>
+
+      <figure class="open-graph__phone">
+        <img src="/static/landing/assets/images/phone.png" alt="Phone" />
+      </figure>
+    </div>
+  </section>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Detect.js/2.2.2/detect.min.js" integrity="sha512-iNuMM5cmiXDvk4VCTp6UEbDwYy/dA3CFTTYKB6/V+LD62S58TQZ+sykXzhmVT1QvqHD39ZhecsPGXjZUaIuSWQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+  // Optional: redirect users on mobile platforms to the according store
+    var result = detect.parse(navigator.userAgent);
+    if (result.os.family.includes('Android')) {
+        window.location.href = 'https://play.google.com/store/apps/details?id=com.agentes.intralot&pli=1';
+    }
+  // You can handle any other logic here - Google Analytics, popups, etc...
+</script>
+
+</html>
