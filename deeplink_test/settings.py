@@ -80,7 +80,7 @@ DATABASES = {
     #     'PASSWORD': os.getenv('POSTGRES_PASSWORD')
     # }
     
-    "default": dj_database_url.parse(os.getenv("DATABASE_URL"))
+    "default": dj_database_url.parse(os.getenv.get('DATABASE_URL'))
 }
 
 
