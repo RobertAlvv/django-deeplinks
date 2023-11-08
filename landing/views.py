@@ -5,4 +5,4 @@ def landing(request):
 
 
 def well_known(request):
-    return render(request, 'assetlinks.json', {})
+    return render(request, 'assetlinks.json', {}, content_type='application/json')
