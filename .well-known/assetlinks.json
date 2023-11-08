@@ -2,8 +2,8 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "",
+      "package_name": "com.robertalv.deeplink",
       "sha256_cert_fingerprints":
-      ["D8:78:2B:42:79:A4:46:35:D5:8D:AE:1F:49:ED:65:22:A7:48:8E:CC:F7:11:EC:E6:5D:09:C0:35:A8:4A:40:E8"]
+      ["45:A2:87:82:9C:09:E8:D9:C6:8D:E2:29:27:D0:AE:EE:60:7A:B9:8C:4B:13:96:ED:7D:8F:49:C9:4D:79:D6:04"]
     }
 }]
